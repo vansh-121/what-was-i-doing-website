@@ -89,7 +89,7 @@ const Hero = () => {
 
         {/* Mockup Preview */}
         <div className="mt-20 max-w-4xl mx-auto animate-fade-up" style={{ animationDelay: "0.6s" }}>
-          <div className="vscode-window glow-primary">
+          <div className="vscode-window glow-primary overflow-visible">
             {/* Window Header */}
             <div className="flex items-center gap-2 px-4 py-3 bg-card border-b border-border/50">
               <div className="flex gap-2">
@@ -103,7 +103,7 @@ const Hero = () => {
             </div>
             
             {/* Editor Content */}
-            <div className="relative p-6 font-mono text-sm min-h-[320px]">
+            <div className="relative p-6 font-mono text-sm pb-56">
               <div className="space-y-1 text-muted-foreground">
                 <div><span className="text-primary">const</span> <span className="text-accent">UserProfile</span> = () =&gt; {"{"}</div>
                 <div className="pl-4"><span className="text-primary">const</span> [user, setUser] = <span className="text-accent">useState</span>(null);</div>
@@ -115,7 +115,7 @@ const Hero = () => {
               </div>
 
               {/* Resume Popup Overlay */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 glass-card rounded-xl p-5 border-primary/30 glow-primary animate-bounce-subtle">
+              <div className="absolute right-6 top-4 w-80 glass-card rounded-xl p-5 border-primary/30 glow-primary animate-bounce-subtle">
                 <div className="flex items-center gap-3 mb-4">
                   <img src={logo} alt="Logo" className="w-8 h-8 rounded-lg" />
                   <div>
