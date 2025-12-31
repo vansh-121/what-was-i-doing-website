@@ -137,7 +137,7 @@ const Hero = () => {
                     <span className="text-accent">TODO: Add user authentication</span>
                   </div>
                 </div>
-                <button className="w-full mt-4 py-2 rounded-lg gradient-accent text-xs font-semibold text-accent-foreground">
+                <button className="w-full mt-4 py-2 rounded-lg gradient-accent text-xs font-semibold text-primary-foreground">
                   Jump to Location
                 </button>
               </div>
