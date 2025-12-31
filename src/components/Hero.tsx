@@ -103,13 +103,15 @@ const Hero = () => {
             </div>
             
             {/* Editor Content */}
-            <div className="relative p-6 font-mono text-sm">
+            <div className="relative p-6 font-mono text-sm min-h-[320px]">
               <div className="space-y-1 text-muted-foreground">
                 <div><span className="text-primary">const</span> <span className="text-accent">UserProfile</span> = () =&gt; {"{"}</div>
                 <div className="pl-4"><span className="text-primary">const</span> [user, setUser] = <span className="text-accent">useState</span>(null);</div>
                 <div className="pl-4 text-green-400">{"// TODO: Add user authentication"}</div>
                 <div className="pl-4"><span className="text-primary">return</span> (</div>
                 <div className="pl-8 opacity-50">...</div>
+                <div className="pl-4">);</div>
+                <div>{"}"};</div>
               </div>
 
               {/* Resume Popup Overlay */}
