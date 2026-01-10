@@ -1,73 +1,193 @@
-# Welcome to your Lovable project
+# WWID Website
 
-## Project info
+<div align="center">
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.6.2-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-6.0.1-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4.17-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-## How can I edit this code?
+A modern, responsive web application built with cutting-edge technologies for optimal performance and user experience.
 
-There are several ways of editing your application.
+[View Demo](#) · [Report Bug](#) · [Request Feature](#)
 
-**Use Lovable**
+</div>
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📋 Table of Contents
 
-**Use your preferred IDE**
+- [About](#-about)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Getting Started](#-getting-started)
+- [Development](#-development)
+- [Deployment](#-deployment)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 About
 
-Follow these steps:
+WWID Website is a fully responsive web application designed with modern UI/UX principles. Built with React and TypeScript, it offers a seamless user experience with fast load times and smooth interactions.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## ✨ Features
 
-# Step 3: Install the necessary dependencies.
-npm i
+- ⚡ **Lightning Fast** - Built with Vite for optimal performance
+- 🎨 **Modern UI** - Beautiful components with shadcn-ui and Tailwind CSS
+- 📱 **Fully Responsive** - Works perfectly on all devices
+- 🔒 **Type Safe** - Written in TypeScript for robust code
+- 🎯 **Component Based** - Modular and maintainable architecture
+- 🌙 **Theme Support** - Dark/Light mode toggle
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|-----------|---------|
+| **React** | UI Library |
+| **TypeScript** | Type Safety |
+| **Vite** | Build Tool |
+| **Tailwind CSS** | Styling |
+| **shadcn-ui** | UI Components |
+| **Bun** | Package Manager |
+
+---
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed:
+- **Node.js** (v18 or higher) - [Download](https://nodejs.org/)
+- **Bun** (recommended) or npm
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/vansh-121/WWID-Website.git
+   ```
+
+2. **Navigate to project directory**
+   ```bash
+   cd WWID-Website
+   ```
+
+3. **Install dependencies**
+   ```bash
+   bun install
+   # or
+   npm install
+   ```
+
+4. **Start development server**
+   ```bash
+   bun run dev
+   # or
+   npm run dev
+   ```
+
+5. **Open your browser**
+   
+   Visit `http://localhost:5173` to see the application running.
+
+---
+
+## 💻 Development
+
+### Available Scripts
+
+```bash
+# Start development server
+bun run dev
+
+# Build for production
+bun run build
+
+# Preview production build
+bun run preview
+
+# Run linting
+bun run lint
 ```
 
-**Edit a file directly in GitHub**
+### Project Structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+WWID-Website/
+├── public/              # Static assets
+├── src/
+│   ├── assets/         # Images, fonts, etc.
+│   ├── components/     # React components
+│   │   └── ui/        # shadcn-ui components
+│   ├── hooks/         # Custom React hooks
+│   ├── lib/           # Utility functions
+│   ├── pages/         # Page components
+│   ├── App.tsx        # Main app component
+│   └── main.tsx       # Entry point
+├── package.json
+└── vite.config.ts     # Vite configuration
+```
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🚀 Deployment
 
-## What technologies are used for this project?
+### Build for Production
 
-This project is built with:
+```bash
+bun run build
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The optimized production build will be in the `dist/` directory.
 
-## How can I deploy this project?
+### Deploy to Vercel/Netlify
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+1. Push your code to GitHub
+2. Connect your repository to Vercel or Netlify
+3. Configure build settings:
+   - **Build Command:** `bun run build`
+   - **Output Directory:** `dist`
+4. Deploy!
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## 🤝 Contributing
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 👤 Author
+
+**Vansh**
+
+- GitHub: [@vansh-121](https://github.com/vansh-121)
+- Email: vansh.sethi98760@gmail.com
+
+---
+
+<div align="center">
+
+Made with ❤️ by Vansh
+
+⭐ Star this repo if you find it helpful!
+
+</div>
