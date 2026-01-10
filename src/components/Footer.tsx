@@ -80,7 +80,7 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-4 sm:gap-6">
             <span className="text-xs sm:text-sm text-muted-foreground">MIT License</span>
-            <span className="text-xs sm:text-sm text-muted-foreground">v1.0.2</span>
+            <span className="text-xs sm:text-sm text-muted-foreground">v1.0.4</span>
           </div>
         </div>
       </div>
