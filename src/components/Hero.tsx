@@ -1,13 +1,13 @@
-import { ArrowRight, Download, Github, Star, Users, Zap } from "lucide-react";
+import { ArrowRight, Download, Github, Zap, Shield, Clock, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
 
 const Hero = () => {
   const stats = [
-    { icon: Download, label: "Downloads", value: "1K+" },
-    { icon: Star, label: "Rating", value: "5.0" },
-    { icon: Users, label: "Active Users", value: "500+" },
-    { icon: Zap, label: "Version", value: "1.0.2" },
+    { icon: Zap, label: "Setup", value: "Instant" },
+    { icon: Shield, label: "Privacy", value: "100% Local" },
+    { icon: Clock, label: "Time Saved", value: "15min/day" },
+    { icon: Sparkles, label: "Version", value: "1.0.4" },
   ];
 
   return (
