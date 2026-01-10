@@ -36,18 +36,18 @@ const Testimonials = () => {
     <section className="section-padding relative">
       <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent" />
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Use Cases</span>
-          <h2 className="section-title mt-2 mb-6">
+      <div className="container mx-auto px-3 sm:px-4 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+          <span className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider">Use Cases</span>
+          <h2 className="section-title mt-2 mb-4 sm:mb-6">
             Built for <span className="gradient-text">Every Developer</span>
           </h2>
-          <p className="section-subtitle mx-auto">
+          <p className="section-subtitle mx-auto px-2 sm:px-0">
             No matter your workflow, this extension adapts to help you stay productive.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 lg:gap-6 max-w-5xl mx-auto">
           {useCases.map((useCase, index) => (
             <div
               key={index}

@@ -41,17 +41,17 @@ const Configuration = () => {
 
   return (
     <section className="section-padding relative">
-      <div className="absolute right-0 bottom-0 w-96 h-96 bg-accent/10 rounded-full blur-[120px] -z-10" />
+      <div className="absolute right-0 bottom-0 w-64 sm:w-96 h-64 sm:h-96 bg-accent/10 rounded-full blur-[80px] sm:blur-[120px] -z-10" />
       
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Configuration</span>
-          <h2 className="section-title mt-2 mb-6">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+          <span className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider">Configuration</span>
+          <h2 className="section-title mt-2 mb-4 sm:mb-6">
             <span className="gradient-text">Customize</span> Your
             <br />
             Workflow
           </h2>
-          <p className="section-subtitle mx-auto">
+          <p className="section-subtitle mx-auto px-2 sm:px-0">
             Fine-tune the extension to match your preferences. All settings are accessible through VS Code's settings panel.
           </p>
         </div>

@@ -24,17 +24,17 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass py-3" : "py-5"
+        isScrolled ? "glass py-2 sm:py-3" : "py-3 sm:py-5"
       }`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-3 group">
+      <div className="container mx-auto px-3 sm:px-4 flex items-center justify-between">
+        <a href="#" className="flex items-center gap-2 sm:gap-3 group">
           <img
             src={logo}
             alt="What Was I Doing? Logo"
-            className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
+            className="w-8 h-8 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-110"
           />
-          <span className="font-bold text-lg hidden sm:block">What Was I Doing?</span>
+          <span className="font-bold text-sm sm:text-lg hidden xs:block">What Was I Doing?</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -46,21 +46,21 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-2 lg:gap-3">
           <a
             href="https://github.com/vansh-121/What-Was-I-Doing-Extension"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary text-sm px-4 py-2"
+            className="btn-secondary text-xs lg:text-sm px-3 lg:px-4 py-2"
           >
-            <ExternalLink className="w-4 h-4" />
+            <ExternalLink className="w-3 h-3 lg:w-4 lg:h-4" />
             GitHub
           </a>
           <a
             href="https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary text-sm px-4 py-2"
+            className="btn-primary text-xs lg:text-sm px-3 lg:px-4 py-2"
           >
             Install Now
           </a>

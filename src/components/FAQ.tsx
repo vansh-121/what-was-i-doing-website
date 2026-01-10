@@ -43,33 +43,33 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="section-padding relative">
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -z-10" />
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-64 sm:w-96 h-64 sm:h-96 bg-primary/10 rounded-full blur-[80px] sm:blur-[120px] -z-10" />
       
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">FAQ</span>
-          <h2 className="section-title mt-2 mb-6">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+          <span className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider">FAQ</span>
+          <h2 className="section-title mt-2 mb-4 sm:mb-6">
             Frequently Asked
             <br />
             <span className="gradient-text">Questions</span>
           </h2>
-          <p className="section-subtitle mx-auto">
+          <p className="section-subtitle mx-auto px-2 sm:px-0">
             Got questions? We've got answers. If you can't find what you're looking for, open an issue on GitHub.
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-2 sm:space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="feature-card border-border/50 px-6"
+                className="feature-card border-border/50 px-3 sm:px-6"
               >
-                <AccordionTrigger className="text-left hover:no-underline hover:text-primary transition-colors py-6">
-                  <span className="font-semibold">{faq.question}</span>
+                <AccordionTrigger className="text-left hover:no-underline hover:text-primary transition-colors py-3 sm:py-6">
+                  <span className="font-semibold text-sm sm:text-base">{faq.question}</span>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6">
+                <AccordionContent className="text-muted-foreground pb-3 sm:pb-6 text-xs sm:text-sm">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
