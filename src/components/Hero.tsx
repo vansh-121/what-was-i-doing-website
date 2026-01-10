@@ -43,6 +43,10 @@ const Hero = () => {
             <img
               src={logo}
               alt="What Was I Doing?"
+              width={96}
+              height={96}
+              fetchPriority="high"
+              decoding="async"
               className="w-16 h-16 sm:w-24 sm:h-24 mx-auto animate-float glow-primary rounded-xl sm:rounded-2xl"
             />
           </motion.div>
@@ -152,7 +156,7 @@ const Hero = () => {
               {/* Resume Popup Overlay - Positioned below code on mobile, overlaid on desktop */}
               <div className="relative sm:absolute sm:right-6 sm:top-4 w-full sm:w-80 mt-6 sm:mt-0 glass-card rounded-xl p-4 sm:p-5 border-primary/30 glow-primary animate-bounce-subtle">
                 <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                  <img src={logo} alt="Logo" className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg" />
+                  <img src={logo} alt="Logo" width={32} height={32} loading="lazy" decoding="async" className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg" />
                   <div>
                     <h3 className="font-semibold text-xs sm:text-sm">Welcome Back!</h3>
                     <p className="text-[10px] sm:text-xs text-muted-foreground">You've been away for 15 minutes</p>
