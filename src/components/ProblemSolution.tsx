@@ -33,7 +33,7 @@ const ProblemSolution = () => {
       
       <div className="container mx-auto px-3 sm:px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-start">
             {/* Problem Side */}
             <ScrollFadeIn direction="left">
               <div className="space-y-6 sm:space-y-8">
@@ -64,7 +64,7 @@ const ProblemSolution = () => {
             </ScrollFadeIn>
 
             {/* Arrow */}
-            <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
               <div className="p-4 rounded-full glass border-primary/30 glow-primary">
                 <ArrowRight className="w-8 h-8 text-primary" />
               </div>
@@ -93,19 +93,24 @@ const ProblemSolution = () => {
                     </div>
                   ))}
                 </div>
-
-                <a
-                  href="https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary inline-flex mt-2 sm:mt-4 text-sm sm:text-base"
-                >
-                  Try It Free
-                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
-                </a>
               </div>
             </ScrollFadeIn>
           </div>
+
+          {/* Centered CTA Button */}
+          <ScrollFadeIn direction="up">
+            <div className="flex justify-center mt-8 sm:mt-12">
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex text-sm sm:text-base"
+              >
+                Try It Free
+                <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
+              </a>
+            </div>
+          </ScrollFadeIn>
         </div>
       </div>
     </section>
