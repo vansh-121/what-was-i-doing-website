@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -11,8 +12,24 @@ import Installation from "@/components/Installation";
 import FAQ from "@/components/FAQ";
 import OpenSource from "@/components/OpenSource";
 import Footer from "@/components/Footer";
+import LoadingSkeleton from "@/components/LoadingSkeleton";
 
 const Index = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate initial load time for assets
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingSkeleton />;
+  }
+
   return (
     <>
       <Helmet>
@@ -57,7 +74,7 @@ const Index = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background animate-fade-in">
         <Navbar />
         <main>
           <Hero />
