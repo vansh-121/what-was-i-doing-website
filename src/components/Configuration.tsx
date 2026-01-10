@@ -1,4 +1,5 @@
 import { Settings, Clock, Database, Bell, FileX, Tag } from "lucide-react";
+import ScrollFadeIn from "./ScrollFadeIn";
 
 const Configuration = () => {
   const settings = [
@@ -44,7 +45,7 @@ const Configuration = () => {
       <div className="absolute right-0 bottom-0 w-64 sm:w-96 h-64 sm:h-96 bg-accent/10 rounded-full blur-[80px] sm:blur-[120px] -z-10" />
       
       <div className="container mx-auto px-3 sm:px-4">
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+        <ScrollFadeIn className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
           <span className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider">Configuration</span>
           <h2 className="section-title mt-2 mb-4 sm:mb-6">
             <span className="gradient-text">Customize</span> Your
@@ -54,10 +55,10 @@ const Configuration = () => {
           <p className="section-subtitle mx-auto px-2 sm:px-0">
             Fine-tune the extension to match your preferences. All settings are accessible through VS Code's settings panel.
           </p>
-        </div>
+        </ScrollFadeIn>
 
         {/* Settings Panel Mockup */}
-        <div className="max-w-4xl mx-auto">
+        <ScrollFadeIn className="max-w-4xl mx-auto">
           <div className="vscode-window">
             <div className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-4 py-2 sm:py-3 border-b border-border/50 overflow-x-auto">
               <Settings className="w-3 h-3 sm:w-4 sm:h-4 text-muted-foreground flex-shrink-0" />
@@ -94,7 +95,7 @@ const Configuration = () => {
               ))}
             </div>
           </div>
-        </div>
+        </ScrollFadeIn>
       </div>
     </section>
   );

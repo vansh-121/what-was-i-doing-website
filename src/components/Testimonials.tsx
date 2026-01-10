@@ -1,4 +1,5 @@
 import { User, Laptop, Users, Code2, Quote } from "lucide-react";
+import ScrollFadeIn from "./ScrollFadeIn";
 
 const Testimonials = () => {
   const useCases = [
@@ -37,7 +38,7 @@ const Testimonials = () => {
       <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent" />
       
       <div className="container mx-auto px-3 sm:px-4 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+        <ScrollFadeIn className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
           <span className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider">Use Cases</span>
           <h2 className="section-title mt-2 mb-4 sm:mb-6">
             Built for <span className="gradient-text">Every Developer</span>
@@ -45,30 +46,35 @@ const Testimonials = () => {
           <p className="section-subtitle mx-auto px-2 sm:px-0">
             No matter your workflow, this extension adapts to help you stay productive.
           </p>
-        </div>
+        </ScrollFadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 lg:gap-6 max-w-5xl mx-auto">
           {useCases.map((useCase, index) => (
-            <div
+            <ScrollFadeIn
               key={index}
-              className={`relative p-4 sm:p-6 rounded-2xl bg-gradient-to-br ${useCase.gradient} border border-border/50 group hover:border-primary/30 transition-all duration-300`}
+              delay={index * 0.1}
+              direction={index % 2 === 0 ? "left" : "right"}
             >
-              <Quote className="absolute top-3 right-3 sm:top-4 sm:right-4 w-6 h-6 sm:w-8 sm:h-8 text-foreground/10" />
-              
-              <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                <div className="p-2 sm:p-3 rounded-xl glass flex-shrink-0">
-                  <useCase.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+              <div
+                className={`relative p-4 sm:p-6 rounded-2xl bg-gradient-to-br ${useCase.gradient} border border-border/50 group hover:border-primary/30 transition-all duration-300 h-full`}
+              >
+                <Quote className="absolute top-3 right-3 sm:top-4 sm:right-4 w-6 h-6 sm:w-8 sm:h-8 text-foreground/10" />
+                
+                <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                  <div className="p-2 sm:p-3 rounded-xl glass flex-shrink-0">
+                    <useCase.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                  </div>
+                  <div className="min-w-0">
+                    <span className="text-[10px] sm:text-xs text-primary font-semibold uppercase tracking-wider">{useCase.role}</span>
+                    <h3 className="font-semibold text-base sm:text-lg">{useCase.title}</h3>
+                  </div>
                 </div>
-                <div className="min-w-0">
-                  <span className="text-[10px] sm:text-xs text-primary font-semibold uppercase tracking-wider">{useCase.role}</span>
-                  <h3 className="font-semibold text-base sm:text-lg">{useCase.title}</h3>
-                </div>
+                
+                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                  {useCase.description}
+                </p>
               </div>
-              
-              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                {useCase.description}
-              </p>
-            </div>
+            </ScrollFadeIn>
           ))}
         </div>
       </div>
