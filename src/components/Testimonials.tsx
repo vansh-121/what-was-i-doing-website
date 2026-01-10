@@ -47,25 +47,25 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto">
           {useCases.map((useCase, index) => (
             <div
               key={index}
-              className={`relative p-6 rounded-2xl bg-gradient-to-br ${useCase.gradient} border border-border/50 group hover:border-primary/30 transition-all duration-300`}
+              className={`relative p-4 sm:p-6 rounded-2xl bg-gradient-to-br ${useCase.gradient} border border-border/50 group hover:border-primary/30 transition-all duration-300`}
             >
-              <Quote className="absolute top-4 right-4 w-8 h-8 text-foreground/10" />
+              <Quote className="absolute top-3 right-3 sm:top-4 sm:right-4 w-6 h-6 sm:w-8 sm:h-8 text-foreground/10" />
               
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-xl glass">
-                  <useCase.icon className="w-6 h-6 text-primary" />
+              <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                <div className="p-2 sm:p-3 rounded-xl glass flex-shrink-0">
+                  <useCase.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 </div>
-                <div>
-                  <span className="text-xs text-primary font-semibold uppercase tracking-wider">{useCase.role}</span>
-                  <h3 className="font-semibold text-lg">{useCase.title}</h3>
+                <div className="min-w-0">
+                  <span className="text-[10px] sm:text-xs text-primary font-semibold uppercase tracking-wider">{useCase.role}</span>
+                  <h3 className="font-semibold text-base sm:text-lg">{useCase.title}</h3>
                 </div>
               </div>
               
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                 {useCase.description}
               </p>
             </div>

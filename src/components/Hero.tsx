@@ -103,41 +103,41 @@ const Hero = () => {
             </div>
             
             {/* Editor Content */}
-            <div className="relative p-6 font-mono text-sm pb-56">
-              <div className="space-y-1 text-muted-foreground">
+            <div className="relative p-3 sm:p-6 font-mono text-xs sm:text-sm pb-4 sm:pb-56">
+              <div className="space-y-1 text-muted-foreground text-[10px] sm:text-sm">
                 <div><span className="text-primary">const</span> <span className="text-accent">UserProfile</span> = () =&gt; {"{"}</div>
-                <div className="pl-4"><span className="text-primary">const</span> [user, setUser] = <span className="text-accent">useState</span>(null);</div>
-                <div className="pl-4 text-green-400">{"// TODO: Add user authentication"}</div>
-                <div className="pl-4"><span className="text-primary">return</span> (</div>
-                <div className="pl-8 opacity-50">...</div>
-                <div className="pl-4">);</div>
+                <div className="pl-2 sm:pl-4"><span className="text-primary">const</span> [user, setUser] = <span className="text-accent">useState</span>(null);</div>
+                <div className="pl-2 sm:pl-4 text-green-400">{"// TODO: Add user authentication"}</div>
+                <div className="pl-2 sm:pl-4"><span className="text-primary">return</span> (</div>
+                <div className="pl-4 sm:pl-8 opacity-50">...</div>
+                <div className="pl-2 sm:pl-4">);</div>
                 <div>{"}"};</div>
               </div>
 
-              {/* Resume Popup Overlay */}
-              <div className="absolute right-6 top-4 w-80 glass-card rounded-xl p-5 border-primary/30 glow-primary animate-bounce-subtle">
-                <div className="flex items-center gap-3 mb-4">
-                  <img src={logo} alt="Logo" className="w-8 h-8 rounded-lg" />
+              {/* Resume Popup Overlay - Positioned below code on mobile, overlaid on desktop */}
+              <div className="relative sm:absolute sm:right-6 sm:top-4 w-full sm:w-80 mt-6 sm:mt-0 glass-card rounded-xl p-4 sm:p-5 border-primary/30 glow-primary animate-bounce-subtle">
+                <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                  <img src={logo} alt="Logo" className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg" />
                   <div>
-                    <h3 className="font-semibold text-sm">Welcome Back!</h3>
-                    <p className="text-xs text-muted-foreground">You've been away for 15 minutes</p>
+                    <h3 className="font-semibold text-xs sm:text-sm">Welcome Back!</h3>
+                    <p className="text-[10px] sm:text-xs text-muted-foreground">You've been away for 15 minutes</p>
                   </div>
                 </div>
-                <div className="space-y-2 text-xs">
-                  <div className="flex items-center gap-2 p-2 rounded-lg bg-secondary/50">
+                <div className="space-y-2 text-[10px] sm:text-xs">
+                  <div className="flex items-center gap-2 p-1.5 sm:p-2 rounded-lg bg-secondary/50">
                     <span className="text-primary">📄</span>
                     <span className="font-mono">index.tsx</span>
                   </div>
-                  <div className="flex items-center gap-2 p-2 rounded-lg bg-secondary/50">
+                  <div className="flex items-center gap-2 p-1.5 sm:p-2 rounded-lg bg-secondary/50">
                     <span className="text-primary">📍</span>
                     <span className="font-mono">UserProfile()</span>
                   </div>
-                  <div className="flex items-center gap-2 p-2 rounded-lg bg-accent/10 border border-accent/30">
+                  <div className="flex items-center gap-2 p-1.5 sm:p-2 rounded-lg bg-accent/10 border border-accent/30">
                     <span>📝</span>
-                    <span className="text-accent">TODO: Add user authentication</span>
+                    <span className="text-accent truncate">TODO: Add user authentication</span>
                   </div>
                 </div>
-                <button className="w-full mt-4 py-2 rounded-lg gradient-accent text-xs font-semibold text-primary-foreground">
+                <button className="w-full mt-3 sm:mt-4 py-2 rounded-lg gradient-accent text-[10px] sm:text-xs font-semibold text-primary-foreground">
                   Jump to Location
                 </button>
               </div>

@@ -34,26 +34,26 @@ const ProblemSolution = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Problem Side */}
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               <div>
-                <span className="text-destructive font-semibold text-sm uppercase tracking-wider">The Problem</span>
+                <span className="text-destructive font-semibold text-xs sm:text-sm uppercase tracking-wider">The Problem</span>
                 <h2 className="section-title mt-2">
                   Sound <span className="gradient-text">Familiar?</span>
                 </h2>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {problems.map((problem, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-4 p-5 rounded-xl bg-destructive/5 border border-destructive/20 transition-all duration-300 hover:border-destructive/40"
+                    className="flex items-start gap-3 sm:gap-4 p-3 sm:p-5 rounded-xl bg-destructive/5 border border-destructive/20 transition-all duration-300 hover:border-destructive/40"
                   >
-                    <div className="p-3 rounded-lg bg-destructive/10">
-                      <problem.icon className="w-6 h-6 text-destructive" />
+                    <div className="p-2 sm:p-3 rounded-lg bg-destructive/10 flex-shrink-0">
+                      <problem.icon className="w-5 h-5 sm:w-6 sm:h-6 text-destructive" />
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-lg">{problem.title}</h3>
-                      <p className="text-muted-foreground">{problem.description}</p>
+                    <div className="min-w-0">
+                      <h3 className="font-semibold text-base sm:text-lg">{problem.title}</h3>
+                      <p className="text-muted-foreground text-sm sm:text-base">{problem.description}</p>
                     </div>
                   </div>
                 ))}
@@ -68,24 +68,24 @@ const ProblemSolution = () => {
             </div>
 
             {/* Solution Side */}
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               <div>
-                <span className="text-primary font-semibold text-sm uppercase tracking-wider">The Solution</span>
+                <span className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider">The Solution</span>
                 <h2 className="section-title mt-2">
                   What Was I <span className="gradient-text">Doing?</span>
                 </h2>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {solutions.map((solution, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-4 p-5 rounded-xl feature-card"
+                    className="flex items-center gap-3 sm:gap-4 p-3 sm:p-5 rounded-xl feature-card"
                   >
-                    <div className="p-2 rounded-lg bg-primary/10">
-                      <CheckCircle2 className="w-5 h-5 text-primary" />
+                    <div className="p-1.5 sm:p-2 rounded-lg bg-primary/10 flex-shrink-0">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                     </div>
-                    <span className="font-medium">{solution}</span>
+                    <span className="font-medium text-sm sm:text-base">{solution}</span>
                   </div>
                 ))}
               </div>
@@ -94,10 +94,10 @@ const ProblemSolution = () => {
                 href="https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary inline-flex mt-4"
+                className="btn-primary inline-flex mt-2 sm:mt-4 text-sm sm:text-base"
               >
                 Try It Free
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
               </a>
             </div>
           </div>

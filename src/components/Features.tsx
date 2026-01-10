@@ -73,26 +73,26 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <div
               key={index}
               className="feature-card group"
             >
-              <div className="flex items-start gap-4 mb-4">
-                <div className={`p-3 rounded-xl bg-${feature.color}/10 border border-${feature.color}/20 group-hover:border-${feature.color}/40 transition-colors`}>
-                  <span className="text-2xl">{feature.emoji}</span>
+              <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                <div className={`p-2 sm:p-3 rounded-xl bg-${feature.color}/10 border border-${feature.color}/20 group-hover:border-${feature.color}/40 transition-colors flex-shrink-0`}>
+                  <span className="text-xl sm:text-2xl">{feature.emoji}</span>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-1">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
+                <div className="min-w-0">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-1">{feature.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground">{feature.description}</p>
                 </div>
               </div>
               
-              <ul className="space-y-2 ml-16">
+              <ul className="space-y-2 ml-10 sm:ml-16">
                 {feature.details.map((detail, detailIndex) => (
-                  <li key={detailIndex} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  <li key={detailIndex} className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
                     {detail}
                   </li>
                 ))}
