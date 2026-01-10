@@ -46,22 +46,22 @@ const Installation = () => {
 
   return (
     <section className="section-padding relative">
-      <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[600px] h-[300px] bg-accent/10 rounded-full blur-[120px] -z-10" />
+      <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[300px] sm:w-[450px] lg:w-[600px] h-[150px] sm:h-[225px] lg:h-[300px] bg-accent/10 rounded-full blur-[80px] sm:blur-[100px] lg:blur-[120px] -z-10" />
       
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Installation</span>
-          <h2 className="section-title mt-2 mb-6">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+          <span className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider">Installation</span>
+          <h2 className="section-title mt-2 mb-4 sm:mb-6">
             Get Started in
             <br />
             <span className="gradient-text">Seconds</span>
           </h2>
-          <p className="section-subtitle mx-auto">
+          <p className="section-subtitle mx-auto px-2 sm:px-0">
             Choose your preferred installation method. Zero configuration required.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 max-w-5xl mx-auto">
           {methods.map((method) => (
             <div
               key={method.id}
