@@ -1,4 +1,5 @@
 import { ArrowRight, Download, Github, Star, Users, Zap } from "lucide-react";
+import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
 
 const Hero = () => {
@@ -19,37 +20,62 @@ const Hero = () => {
       <div className="container mx-auto px-3 sm:px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full glass border-primary/20 mb-4 sm:mb-8 animate-fade-up">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full glass border-primary/20 mb-4 sm:mb-8"
+          >
             <span className="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-accent"></span>
             </span>
             <span className="text-[10px] sm:text-sm text-muted-foreground">Now available on VS Code Marketplace</span>
-          </div>
+          </motion.div>
 
           {/* Logo */}
-          <div className="mb-4 sm:mb-8 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="mb-4 sm:mb-8"
+          >
             <img
               src={logo}
               alt="What Was I Doing?"
               className="w-16 h-16 sm:w-24 sm:h-24 mx-auto animate-float glow-primary rounded-xl sm:rounded-2xl"
             />
-          </div>
+          </motion.div>
 
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 tracking-tight animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 tracking-tight"
+          >
             Never Lose Your
             <br />
             <span className="gradient-text">Train of Thought</span>
-          </h1>
+          </motion.h1>
 
           {/* Subheadline */}
-          <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-6 sm:mb-10 leading-relaxed animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.3s" }}>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-6 sm:mb-10 leading-relaxed px-2 sm:px-0"
+          >
             Automatically track your work context and resume exactly where you left off after breaks. The ultimate VS Code extension for developers who value productivity.
-          </p>
+          </motion.p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-16 animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.4s" }}>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-16 px-2 sm:px-0"
+          >
             <a
               href="https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing"
               target="_blank"
@@ -69,26 +95,35 @@ const Hero = () => {
               <Github className="w-4 h-4 sm:w-5 sm:h-5" />
               View on GitHub
             </a>
-          </div>
+          </motion.div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 gap-2 sm:gap-4 max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: "0.5s" }}>
-            {stats.map((stat, index) => (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="grid grid-cols-2 gap-2 sm:gap-4 max-w-3xl mx-auto"
+          >
+            {stats.map((stat) => (
               <div
                 key={stat.label}
                 className="stat-badge justify-center py-2 sm:py-3 flex-wrap"
-                style={{ animationDelay: `${0.5 + index * 0.1}s` }}
               >
                 <stat.icon className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
                 <span className="font-semibold text-xs sm:text-sm">{stat.value}</span>
                 <span className="text-muted-foreground text-xs sm:text-sm">{stat.label}</span>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* Mockup Preview */}
-        <div className="mt-10 sm:mt-20 max-w-4xl mx-auto animate-fade-up" style={{ animationDelay: "0.6s" }}>
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="mt-10 sm:mt-20 max-w-4xl mx-auto"
+        >
           <div className="vscode-window glow-primary overflow-visible mx-1 sm:mx-0">
             {/* Window Header */}
             <div className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-4 py-2 sm:py-3 bg-card border-b border-border/50">
@@ -143,7 +178,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
