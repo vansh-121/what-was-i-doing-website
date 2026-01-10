@@ -61,32 +61,32 @@ const Installation = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
           {methods.map((method) => (
             <div
               key={method.id}
               className={`feature-card ${method.recommended ? "border-primary/30 relative overflow-hidden" : ""}`}
             >
               {method.recommended && (
-                <div className="absolute top-4 right-4">
-                  <span className="text-xs px-2 py-1 rounded-full bg-primary/20 text-primary font-semibold">
+                <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
+                  <span className="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full bg-primary/20 text-primary font-semibold">
                     Recommended
                   </span>
                 </div>
               )}
 
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 rounded-xl bg-primary/10">
-                  <method.icon className="w-6 h-6 text-primary" />
+              <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                <div className="p-2 sm:p-3 rounded-xl bg-primary/10">
+                  <method.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold">{method.title}</h3>
+                <h3 className="text-base sm:text-lg font-semibold">{method.title}</h3>
               </div>
 
               {method.steps && (
-                <ol className="space-y-3">
+                <ol className="space-y-2 sm:space-y-3">
                   {method.steps.map((step, index) => (
-                    <li key={index} className="flex items-start gap-3 text-sm">
-                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-xs font-semibold text-primary">
+                    <li key={index} className="flex items-start gap-2 sm:gap-3 text-xs sm:text-sm">
+                      <span className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/10 flex items-center justify-center text-[10px] sm:text-xs font-semibold text-primary">
                         {index + 1}
                       </span>
                       <span className="text-muted-foreground pt-0.5">{step}</span>
@@ -96,20 +96,20 @@ const Installation = () => {
               )}
 
               {method.command && (
-                <div className="space-y-4">
-                  <p className="text-sm text-muted-foreground">Run this command in your terminal:</p>
+                <div className="space-y-3 sm:space-y-4">
+                  <p className="text-xs sm:text-sm text-muted-foreground">Run this command in your terminal:</p>
                   <div className="relative">
-                    <div className="code-block pr-12">
-                      <code className="text-xs break-all">{method.command}</code>
+                    <div className="code-block pr-10 sm:pr-12">
+                      <code className="text-[10px] sm:text-xs break-all">{method.command}</code>
                     </div>
                     <button
                       onClick={() => copyToClipboard(method.command!, method.id)}
-                      className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-md hover:bg-secondary transition-colors"
+                      className="absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 p-1.5 sm:p-2 rounded-md hover:bg-secondary transition-colors"
                     >
                       {copied === method.id ? (
-                        <Check className="w-4 h-4 text-green-500" />
+                        <Check className="w-3 h-3 sm:w-4 sm:h-4 text-green-500" />
                       ) : (
-                        <Copy className="w-4 h-4 text-muted-foreground" />
+                        <Copy className="w-3 h-3 sm:w-4 sm:h-4 text-muted-foreground" />
                       )}
                     </button>
                   </div>
@@ -117,15 +117,15 @@ const Installation = () => {
               )}
 
               {method.link && (
-                <div className="space-y-4">
-                  <p className="text-sm text-muted-foreground">Visit the VS Code Marketplace directly:</p>
+                <div className="space-y-3 sm:space-y-4">
+                  <p className="text-xs sm:text-sm text-muted-foreground">Visit the VS Code Marketplace directly:</p>
                   <a
                     href={method.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-accent w-full justify-center"
+                    className="btn-accent w-full justify-center text-xs sm:text-sm py-2 sm:py-3"
                   >
-                    <Download className="w-4 h-4" />
+                    <Download className="w-3 h-3 sm:w-4 sm:h-4" />
                     Open Marketplace
                   </a>
                 </div>

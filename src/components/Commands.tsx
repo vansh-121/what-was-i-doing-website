@@ -45,35 +45,35 @@ const Commands = () => {
             At Your Fingertips
           </h2>
           <p className="section-subtitle mx-auto">
-            Access all features through VS Code's command palette. Press <kbd className="px-2 py-1 rounded bg-secondary text-primary font-mono text-sm">Ctrl+Shift+P</kbd> to get started.
+            Access all features through VS Code's command palette. Press <kbd className="px-1.5 sm:px-2 py-0.5 sm:py-1 rounded bg-secondary text-primary font-mono text-[10px] sm:text-sm">Ctrl+Shift+P</kbd> to get started.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           {/* Command Palette Mockup */}
           <div className="vscode-window">
-            <div className="p-4 border-b border-border/50">
-              <div className="flex items-center gap-3 px-4 py-3 rounded-lg bg-secondary/50 border border-border/50">
-                <Terminal className="w-5 h-5 text-muted-foreground" />
-                <span className="text-muted-foreground">{">"} What Was I Doing</span>
+            <div className="p-2 sm:p-4 border-b border-border/50">
+              <div className="flex items-center gap-2 sm:gap-3 px-2 sm:px-4 py-2 sm:py-3 rounded-lg bg-secondary/50 border border-border/50">
+                <Terminal className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground flex-shrink-0" />
+                <span className="text-muted-foreground text-xs sm:text-base truncate">{">"} What Was I Doing</span>
               </div>
             </div>
 
-            <div className="p-2">
+            <div className="p-1 sm:p-2">
               {commands.map((cmd, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-4 p-4 rounded-lg hover:bg-secondary/50 transition-colors cursor-pointer group"
+                  className="flex items-start sm:items-center gap-2 sm:gap-4 p-2 sm:p-4 rounded-lg hover:bg-secondary/50 transition-colors cursor-pointer group"
                 >
-                  <span className="text-xl">{cmd.emoji}</span>
-                  <div className="flex-1">
-                    <p className="font-mono text-sm text-primary group-hover:text-accent transition-colors">
+                  <span className="text-lg sm:text-xl flex-shrink-0">{cmd.emoji}</span>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-mono text-xs sm:text-sm text-primary group-hover:text-accent transition-colors break-words">
                       {cmd.command}
                     </p>
-                    <p className="text-xs text-muted-foreground mt-1">{cmd.description}</p>
+                    <p className="text-[10px] sm:text-xs text-muted-foreground mt-0.5 sm:mt-1">{cmd.description}</p>
                   </div>
                   {cmd.shortcut && (
-                    <kbd className="px-2 py-1 rounded bg-secondary text-xs font-mono text-muted-foreground">
+                    <kbd className="px-1.5 sm:px-2 py-0.5 sm:py-1 rounded bg-secondary text-[10px] sm:text-xs font-mono text-muted-foreground flex-shrink-0">
                       {cmd.shortcut}
                     </kbd>
                   )}
