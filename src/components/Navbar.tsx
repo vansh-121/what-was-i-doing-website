@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ExternalLink } from "lucide-react";
 import logo from "@/assets/logo.png";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,6 +48,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-2 lg:gap-3">
+          <ThemeToggle />
           <a
             href="https://github.com/vansh-121/What-Was-I-Doing-Extension"
             target="_blank"
@@ -90,6 +92,10 @@ const Navbar = () => {
               </a>
             ))}
             <div className="flex flex-col gap-3 pt-4 border-t border-border/50">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-muted-foreground">Theme</span>
+                <ThemeToggle />
+              </div>
               <a
                 href="https://github.com/vansh-121/What-Was-I-Doing-Extension"
                 target="_blank"
