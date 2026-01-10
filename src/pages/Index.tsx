@@ -1,18 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import ProblemSolution from "@/components/ProblemSolution";
-import Features from "@/components/Features";
-import HowItWorks from "@/components/HowItWorks";
-import Commands from "@/components/Commands";
-import Configuration from "@/components/Configuration";
-import Testimonials from "@/components/Testimonials";
-import Installation from "@/components/Installation";
-import FAQ from "@/components/FAQ";
-import OpenSource from "@/components/OpenSource";
-import Footer from "@/components/Footer";
 import LoadingSkeleton from "@/components/LoadingSkeleton";
+
+// Lazy load below-the-fold components
+const ProblemSolution = lazy(() => import("@/components/ProblemSolution"));
+const Features = lazy(() => import("@/components/Features"));
+const HowItWorks = lazy(() => import("@/components/HowItWorks"));
+const Commands = lazy(() => import("@/components/Commands"));
+const Configuration = lazy(() => import("@/components/Configuration"));
+const Testimonials = lazy(() => import("@/components/Testimonials"));
+const Installation = lazy(() => import("@/components/Installation"));
+const FAQ = lazy(() => import("@/components/FAQ"));
+const OpenSource = lazy(() => import("@/components/OpenSource"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -78,17 +80,21 @@ const Index = () => {
         <Navbar />
         <main>
           <Hero />
-          <ProblemSolution />
-          <Features />
-          <HowItWorks />
-          <Commands />
-          <Configuration />
-          <Testimonials />
-          <Installation />
-          <FAQ />
-          <OpenSource />
+          <Suspense fallback={<div className="min-h-[200px]" />}>
+            <ProblemSolution />
+            <Features />
+            <HowItWorks />
+            <Commands />
+            <Configuration />
+            <Testimonials />
+            <Installation />
+            <FAQ />
+            <OpenSource />
+          </Suspense>
         </main>
-        <Footer />
+        <Suspense fallback={<div className="min-h-[100px]" />}>
+          <Footer />
+        </Suspense>
       </div>
     </>
   );
