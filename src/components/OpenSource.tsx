@@ -54,12 +54,20 @@ const OpenSource = () => {
                   View on GitHub
                 </a>
                 <a
+                  href="https://github.com/sponsors/vansh-121"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-sponsor w-full sm:w-auto justify-center text-sm sm:text-base"
+                >
+                  <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
+                  Sponsor
+                </a>
+                <a
                   href="https://github.com/vansh-121/What-Was-I-Doing-Extension/issues"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary w-full sm:w-auto justify-center text-sm sm:text-base"
                 >
-                  <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
                   Report an Issue
                 </a>
               </div>
