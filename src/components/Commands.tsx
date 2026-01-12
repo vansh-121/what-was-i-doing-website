@@ -38,15 +38,15 @@ const Commands = () => {
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-64 sm:w-96 h-64 sm:h-96 bg-primary/10 rounded-full blur-[80px] sm:blur-[120px] -z-10" />
       
       <div className="container mx-auto px-3 sm:px-4">
-        <ScrollFadeIn className="text-center max-w-3xl mx-auto mb-6 xs:mb-8 sm:mb-12 lg:mb-16">
-          <span className="text-primary font-semibold text-[10px] xs:text-xs sm:text-sm uppercase tracking-wider">Commands</span>
-          <h2 className="section-title mt-2 mb-3 xs:mb-4 sm:mb-6 leading-tight">
+        <ScrollFadeIn className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+          <span className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider">Commands</span>
+          <h2 className="section-title mt-2 mb-4 sm:mb-6">
             Powerful <span className="gradient-text">Commands</span>
             <br />
             At Your Fingertips
           </h2>
-          <p className="section-subtitle mx-auto px-1 text-xs xs:text-sm sm:text-base">
-            Access all features through VS Code's command palette. Press <kbd className="px-1 xs:px-1.5 sm:px-2 py-0.5 rounded bg-secondary text-primary font-mono text-[9px] xs:text-[10px] sm:text-sm">Ctrl+Shift+P</kbd>
+          <p className="section-subtitle mx-auto px-2 sm:px-0">
+            Access all features through VS Code's command palette. Press <kbd className="px-1 sm:px-2 py-0.5 rounded bg-secondary text-primary font-mono text-[10px] sm:text-sm">Ctrl+Shift+P</kbd> to get started.
           </p>
         </ScrollFadeIn>
 

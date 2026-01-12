@@ -192,53 +192,30 @@
 
   /* Section spacing */
   .section-padding {
-    @apply py-10 xs:py-12 sm:py-16 md:py-24 lg:py-32;
+    @apply py-12 sm:py-16 md:py-24 lg:py-32;
   }
 }
 
 /* Mobile-specific overrides */
 @media (max-width: 480px) {
-  html {
-    font-size: 14px;
-  }
-  
-  .container {
-    @apply px-3;
-  }
-  
   .section-title {
-    @apply text-xl leading-tight;
+    @apply text-2xl;
   }
   
   .section-subtitle {
-    @apply text-sm leading-relaxed;
+    @apply text-base;
   }
   
   .feature-card {
-    @apply p-3;
+    @apply p-4;
   }
   
   .stat-badge {
-    @apply px-2 py-1.5 text-xs gap-1;
+    @apply px-2 py-1.5 text-xs gap-1.5;
   }
   
-  .btn-primary, .btn-secondary, .btn-accent, .btn-sponsor {
-    @apply px-3 py-2 text-xs;
-  }
-  
-  .vscode-window {
-    @apply text-xs;
-  }
-}
-
-/* Extra small mobile (< 360px) */
-@media (max-width: 360px) {
-  html {
-    font-size: 13px;
-  }
-  
-  .container {
-    @apply px-2;
+  .btn-primary, .btn-secondary, .btn-accent {
+    @apply px-4 py-2.5 text-xs;
   }
 }
 
@@ -303,11 +280,11 @@
   }
 
   .section-title {
-    @apply text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
   }
 
   .section-subtitle {
-    @apply text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl leading-relaxed;
+    @apply text-lg md:text-xl text-muted-foreground max-w-2xl;
   }
 }
 
