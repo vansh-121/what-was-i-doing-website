@@ -28,14 +28,14 @@ const Navbar = () => {
         isScrolled ? "glass py-2 sm:py-3" : "py-3 sm:py-5"
       }`}
     >
-      <div className="container mx-auto px-3 sm:px-4 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2 sm:gap-3 group">
+      <div className="container mx-auto px-2 xs:px-3 sm:px-4 flex items-center justify-between">
+        <a href="#" className="flex items-center gap-1.5 xs:gap-2 sm:gap-3 group">
           <img
             src={logo}
             alt="What Was I Doing? Logo"
-            className="w-8 h-8 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-110"
+            className="w-7 h-7 xs:w-8 xs:h-8 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-110"
           />
-          <span className="font-bold text-sm sm:text-lg hidden xs:block">What Was I Doing?</span>
+          <span className="font-bold text-xs xs:text-sm sm:text-lg truncate max-w-[120px] xs:max-w-none">What Was I Doing?</span>
         </a>
 
         {/* Desktop Navigation */}

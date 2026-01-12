@@ -56,7 +56,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 tracking-tight"
+            className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-6 tracking-tight leading-tight"
           >
             Never Lose Your
             <br />
@@ -68,9 +68,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-6 sm:mb-10 leading-relaxed px-2 sm:px-0"
+            className="text-xs xs:text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-5 sm:mb-10 leading-relaxed px-1"
           >
-            Automatically track your work context and resume exactly where you left off after breaks. The ultimate VS Code extension for developers who value productivity.
+            Automatically track your work context and resume exactly where you left off after breaks.
           </motion.p>
 
           {/* CTAs */}
@@ -78,35 +78,35 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-16 px-2 sm:px-0"
+            className="flex flex-col xs:flex-row xs:flex-wrap items-center justify-center gap-2 xs:gap-3 sm:gap-4 mb-6 sm:mb-16 px-1"
           >
             <a
               href="https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-accent text-sm sm:text-base px-5 sm:px-8 py-3 sm:py-4 group w-full sm:w-auto justify-center"
+              className="btn-accent text-xs xs:text-sm sm:text-base px-4 xs:px-5 sm:px-8 py-2.5 xs:py-3 sm:py-4 group w-full xs:w-auto justify-center"
             >
-              <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-              Install for VS Code
+              <Download className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5" />
+              <span className="whitespace-nowrap">Install for VS Code</span>
               <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="https://github.com/vansh-121/What-Was-I-Doing-Extension"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary text-sm sm:text-base px-5 sm:px-8 py-3 sm:py-4 w-full sm:w-auto justify-center"
+              className="btn-secondary text-xs xs:text-sm sm:text-base px-4 xs:px-5 sm:px-8 py-2.5 xs:py-3 sm:py-4 w-full xs:w-auto justify-center"
             >
-              <Github className="w-4 h-4 sm:w-5 sm:h-5" />
-              View on GitHub
+              <Github className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5" />
+              <span>GitHub</span>
             </a>
             <a
               href="https://github.com/sponsors/vansh-121"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-sponsor text-sm sm:text-base px-5 sm:px-8 py-3 sm:py-4 w-full sm:w-auto justify-center"
+              className="btn-sponsor text-xs xs:text-sm sm:text-base px-4 xs:px-5 sm:px-8 py-2.5 xs:py-3 sm:py-4 w-full xs:w-auto justify-center"
             >
-              <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
-              Sponsor
+              <Heart className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5" />
+              <span>Sponsor</span>
             </a>
           </motion.div>
 
@@ -115,16 +115,16 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="grid grid-cols-2 gap-2 sm:gap-4 max-w-3xl mx-auto"
+            className="grid grid-cols-4 gap-1.5 xs:gap-2 sm:gap-4 max-w-3xl mx-auto px-1"
           >
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="stat-badge justify-center py-2 sm:py-3 flex-wrap"
+                className="stat-badge flex-col xs:flex-row justify-center py-1.5 xs:py-2 sm:py-3 px-1 xs:px-2"
               >
                 <stat.icon className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
-                <span className="font-semibold text-xs sm:text-sm">{stat.value}</span>
-                <span className="text-muted-foreground text-xs sm:text-sm">{stat.label}</span>
+                <span className="font-semibold text-[10px] xs:text-xs sm:text-sm">{stat.value}</span>
+                <span className="text-muted-foreground text-[9px] xs:text-xs sm:text-sm hidden xs:inline">{stat.label}</span>
               </div>
             ))}
           </motion.div>
