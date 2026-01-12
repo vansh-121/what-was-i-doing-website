@@ -65,15 +65,13 @@ const Footer = () => {
                     <p className="text-[10px] sm:text-xs text-muted-foreground">@vansh-121</p>
                   </div>
                 </a>
-                <a
-                  href="https://github.com/sponsors/vansh-121"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-sponsor text-xs sm:text-sm px-4 py-2 w-full justify-center"
-                >
-                  <Heart className="w-3 h-3 sm:w-4 sm:h-4" />
-                  Sponsor this Project
-                </a>
+                <iframe
+                  src="https://github.com/sponsors/vansh-121/button"
+                  title="Sponsor vansh-121"
+                  height="32"
+                  width="114"
+                  className="border-0 rounded-md"
+                />
                 <p className="text-muted-foreground text-xs sm:text-sm">
                   Built with <Heart className="w-2.5 h-2.5 sm:w-3 sm:h-3 inline text-destructive" /> for the developer community.
                 </p>
