@@ -6,8 +6,8 @@ const Footer = () => {
   const quickLinks = [
     { label: "VS Code Marketplace", href: "https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing" },
     { label: "GitHub Repository", href: "https://github.com/vansh-121/What-Was-I-Doing-Extension" },
+    { label: "Sponsor on GitHub", href: "https://github.com/sponsors/vansh-121" },
     { label: "Report an Issue", href: "https://github.com/vansh-121/What-Was-I-Doing-Extension/issues" },
-    { label: "Request a Feature", href: "https://github.com/vansh-121/What-Was-I-Doing-Extension/issues/new" },
   ];
 
   return (
@@ -64,6 +64,15 @@ const Footer = () => {
                     <p className="font-medium text-sm sm:text-base group-hover:text-primary transition-colors">Vansh Sethi</p>
                     <p className="text-[10px] sm:text-xs text-muted-foreground">@vansh-121</p>
                   </div>
+                </a>
+                <a
+                  href="https://github.com/sponsors/vansh-121"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-sponsor text-xs sm:text-sm px-4 py-2 w-full justify-center"
+                >
+                  <Heart className="w-3 h-3 sm:w-4 sm:h-4" />
+                  Sponsor this Project
                 </a>
                 <p className="text-muted-foreground text-xs sm:text-sm">
                   Built with <Heart className="w-2.5 h-2.5 sm:w-3 sm:h-3 inline text-destructive" /> for the developer community.

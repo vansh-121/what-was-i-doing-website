@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Github, Star, Users, Zap } from "lucide-react";
+import { ArrowRight, Download, Github, Heart, Star, Users, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
 
@@ -98,6 +98,15 @@ const Hero = () => {
             >
               <Github className="w-4 h-4 sm:w-5 sm:h-5" />
               View on GitHub
+            </a>
+            <a
+              href="https://github.com/sponsors/vansh-121"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-sponsor text-sm sm:text-base px-5 sm:px-8 py-3 sm:py-4 w-full sm:w-auto justify-center"
+            >
+              <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
+              Sponsor
             </a>
           </motion.div>
 

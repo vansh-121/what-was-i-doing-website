@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ExternalLink } from "lucide-react";
+import { Menu, X, ExternalLink, Heart } from "lucide-react";
 import logo from "@/assets/logo.png";
 import ThemeToggle from "./ThemeToggle";
 
@@ -50,6 +50,15 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-2 lg:gap-3">
           <ThemeToggle />
           <a
+            href="https://github.com/sponsors/vansh-121"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-sponsor text-xs lg:text-sm px-3 lg:px-4 py-2"
+          >
+            <Heart className="w-3 h-3 lg:w-4 lg:h-4" />
+            Sponsor
+          </a>
+          <a
             href="https://github.com/vansh-121/What-Was-I-Doing-Extension"
             target="_blank"
             rel="noopener noreferrer"
@@ -96,6 +105,15 @@ const Navbar = () => {
                 <span className="text-sm text-muted-foreground">Theme</span>
                 <ThemeToggle />
               </div>
+              <a
+                href="https://github.com/sponsors/vansh-121"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-sponsor justify-center"
+              >
+                <Heart className="w-4 h-4" />
+                Sponsor
+              </a>
               <a
                 href="https://github.com/vansh-121/What-Was-I-Doing-Extension"
                 target="_blank"
