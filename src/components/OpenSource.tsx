@@ -53,15 +53,13 @@ const OpenSource = () => {
                   <Github className="w-4 h-4 sm:w-5 sm:h-5" />
                   View on GitHub
                 </a>
-                <a
-                  href="https://github.com/sponsors/vansh-121"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-sponsor w-full sm:w-auto justify-center text-sm sm:text-base"
-                >
-                  <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
-                  Sponsor
-                </a>
+                <iframe
+                  src="https://github.com/sponsors/vansh-121/button"
+                  title="Sponsor vansh-121"
+                  height="32"
+                  width="114"
+                  className="border-0 rounded-md"
+                />
                 <a
                   href="https://github.com/vansh-121/What-Was-I-Doing-Extension/issues"
                   target="_blank"

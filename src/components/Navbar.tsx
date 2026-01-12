@@ -49,15 +49,13 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-2 lg:gap-3">
           <ThemeToggle />
-          <a
-            href="https://github.com/sponsors/vansh-121"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-sponsor text-xs lg:text-sm px-3 lg:px-4 py-2"
-          >
-            <Heart className="w-3 h-3 lg:w-4 lg:h-4" />
-            Sponsor
-          </a>
+          <iframe
+            src="https://github.com/sponsors/vansh-121/button"
+            title="Sponsor vansh-121"
+            height="32"
+            width="114"
+            className="border-0 rounded-md"
+          />
           <a
             href="https://github.com/vansh-121/What-Was-I-Doing-Extension"
             target="_blank"
@@ -105,15 +103,13 @@ const Navbar = () => {
                 <span className="text-sm text-muted-foreground">Theme</span>
                 <ThemeToggle />
               </div>
-              <a
-                href="https://github.com/sponsors/vansh-121"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-sponsor justify-center"
-              >
-                <Heart className="w-4 h-4" />
-                Sponsor
-              </a>
+              <iframe
+                src="https://github.com/sponsors/vansh-121/button"
+                title="Sponsor vansh-121"
+                height="32"
+                width="114"
+                className="border-0 rounded-md mx-auto"
+              />
               <a
                 href="https://github.com/vansh-121/What-Was-I-Doing-Extension"
                 target="_blank"
