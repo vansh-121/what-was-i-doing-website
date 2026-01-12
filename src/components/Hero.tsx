@@ -99,13 +99,15 @@ const Hero = () => {
               <Github className="w-4 h-4 sm:w-5 sm:h-5" />
               View on GitHub
             </a>
-            <iframe
-              src="https://github.com/sponsors/vansh-121/button"
-              title="Sponsor vansh-121"
-              height="32"
-              width="114"
-              className="border-0 rounded-md"
-            />
+            <a
+              href="https://github.com/sponsors/vansh-121"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-sponsor text-sm sm:text-base px-5 sm:px-8 py-3 sm:py-4 w-full sm:w-auto justify-center"
+            >
+              <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
+              Sponsor
+            </a>
           </motion.div>
 
           {/* Stats */}
