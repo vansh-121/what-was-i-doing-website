@@ -4,7 +4,7 @@
 
 <img src="https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png" alt="WWID Logo" width="128" height="128">
 
-### Never Lose Your Train of Thought
+### Never Lose Your Coding Context
 
 [![Live Website](https://img.shields.io/badge/🌐_Live-www.whatwasidoing.dev-4CAF50?style=for-the-badge)](https://www.whatwasidoing.dev)
 [![VS Code Extension](https://img.shields.io/visual-studio-marketplace/v/VanshSethi.what-was-i-doing?style=for-the-badge&logo=visualstudiocode&label=VS%20Code)](https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing)

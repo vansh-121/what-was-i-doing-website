@@ -60,7 +60,7 @@ const Hero = () => {
           >
             Never Lose Your
             <br />
-            <span className="gradient-text">Train of Thought</span>
+            <span className="gradient-text">Coding Context</span>
           </motion.h1>
 
           {/* Subheadline */}

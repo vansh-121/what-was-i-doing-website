@@ -35,7 +35,7 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>What Was I Doing? - Never Lose Your Train of Thought | VS Code Extension</title>
+        <title>What Was I Doing? - Never Lose Your Coding Context | VS Code Extension</title>
         <meta
           name="description"
           content="Automatically track your work context and resume exactly where you left off. The ultimate VS Code extension for developers who value productivity. Install now!"
@@ -44,13 +44,13 @@ const Index = () => {
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="What Was I Doing? - Never Lose Your Train of Thought" />
+        <meta property="og:title" content="What Was I Doing? - Never Lose Your Coding Context" />
         <meta property="og:description" content="Automatically track your work context and resume exactly where you left off. The ultimate VS Code extension for developers who value productivity." />
         <meta property="og:image" content="https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="What Was I Doing? - Never Lose Your Train of Thought" />
+        <meta name="twitter:title" content="What Was I Doing? - Never Lose Your Coding Context" />
         <meta name="twitter:description" content="Automatically track your work context and resume exactly where you left off." />
         <meta name="twitter:image" content="https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png" />
         

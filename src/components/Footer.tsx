@@ -23,7 +23,7 @@ const Footer = () => {
                 <span className="font-bold text-base sm:text-lg">What Was I Doing?</span>
               </div>
               <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
-                Never lose your train of thought when returning to code. A VS Code extension that automatically tracks your work context.
+                Never Lose Your Coding Context when returning to code. A VS Code extension that automatically tracks your work context.
               </p>
             </div>
 
