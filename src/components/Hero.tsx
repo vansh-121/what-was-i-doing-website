@@ -1,13 +1,13 @@
-import { ArrowRight, Download, Github, Heart, Star, Users, Zap } from "lucide-react";
+import { ArrowRight, Download, Github, Heart, Star, Clock, Zap, MousePointerClick } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
 
 const Hero = () => {
   const stats = [
-    { icon: Download, label: "Downloads", value: "1K+" },
+    { icon: Zap, label: "Setup", value: "Instant" },
     { icon: Star, label: "Rating", value: "5.0" },
-    { icon: Users, label: "Active Users", value: "500+" },
-    { icon: Zap, label: "Version", value: "1.0.2" },
+    { icon: MousePointerClick, label: "Resume", value: "One Click" },
+    { icon: Clock, label: "Version", value: "1.0.4" },
   ];
 
   return (
@@ -16,11 +16,11 @@ const Hero = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-30" />
       <div className="absolute top-1/4 -left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-primary/20 rounded-full blur-[100px] sm:blur-[128px] animate-glow-pulse" />
       <div className="absolute bottom-1/4 -right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-accent/20 rounded-full blur-[100px] sm:blur-[128px] animate-glow-pulse" style={{ animationDelay: "1s" }} />
-      
+
       <div className="container mx-auto px-3 sm:px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Badge */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -34,7 +34,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Logo */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -52,7 +52,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Main Headline */}
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -64,7 +64,7 @@ const Hero = () => {
           </motion.h1>
 
           {/* Subheadline */}
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -74,7 +74,7 @@ const Hero = () => {
           </motion.p>
 
           {/* CTAs */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -111,7 +111,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Stats */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -131,7 +131,7 @@ const Hero = () => {
         </div>
 
         {/* Mockup Preview */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -149,7 +149,7 @@ const Hero = () => {
                 <span className="text-[10px] sm:text-sm text-muted-foreground font-mono truncate">index.tsx — myproject</span>
               </div>
             </div>
-            
+
             {/* Editor Content */}
             <div className="relative p-3 sm:p-6 font-mono text-xs sm:text-sm pb-4 sm:pb-56">
               <div className="space-y-1 text-muted-foreground text-[10px] sm:text-sm">
