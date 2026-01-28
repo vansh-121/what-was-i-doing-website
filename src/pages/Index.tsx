@@ -49,7 +49,7 @@ const Index = () => {
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />
         <meta name="bingbot" content="index, follow" />
-        <link rel="canonical" href="https://whatwasidoing.dev/" />
+        <link rel="canonical" href="https://www.whatwasidoing.dev/" />
         
         {/* Author Information */}
         <link rel="author" href="https://vanshsethi.in/" />
@@ -58,7 +58,7 @@ const Index = () => {
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://whatwasidoing.dev/" />
+        <meta property="og:url" content="https://www.whatwasidoing.dev/" />
         <meta property="og:title" content="What Was I Doing? - Never Lose Your Coding Context" />
         <meta property="og:description" content="Automatically track your work context and resume exactly where you left off. The ultimate VS Code extension for developers." />
         <meta property="og:image" content="https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png" />
@@ -69,7 +69,7 @@ const Index = () => {
         
         {/* Twitter / Social Media */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://whatwasidoing.dev/" />
+        <meta name="twitter:url" content="https://www.whatwasidoing.dev/" />
         <meta name="twitter:title" content="What Was I Doing? - VS Code Extension" />
         <meta name="twitter:description" content="Never Lose Your Coding Context when returning to code. Free VS Code extension for developers." />
         <meta name="twitter:image" content="https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png" />
@@ -81,7 +81,7 @@ const Index = () => {
             "@type": "SoftwareApplication",
             "name": "What Was I Doing?",
             "description": "Automatically track your work context and resume exactly where you left off. The ultimate VS Code extension for developers who value productivity.",
-            "url": "https://whatwasidoing.dev/",
+            "url": "https://www.whatwasidoing.dev/",
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Windows, macOS, Linux",
             "softwareVersion": "1.0.0",
@@ -102,7 +102,7 @@ const Index = () => {
             "publisher": {
               "@type": "Organization",
               "name": "What Was I Doing",
-              "url": "https://whatwasidoing.dev/"
+              "url": "https://www.whatwasidoing.dev/"
             },
             "downloadUrl": "https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing",
             "screenshot": "https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png",
@@ -125,11 +125,11 @@ const Index = () => {
             "@context": "https://schema.org",
             "@type": "WebSite",
             "name": "What Was I Doing?",
-            "url": "https://whatwasidoing.dev/",
+            "url": "https://www.whatwasidoing.dev/",
             "description": "Official website for What Was I Doing? VS Code Extension",
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://whatwasidoing.dev/?q={search_term_string}",
+              "target": "https://www.whatwasidoing.dev/?q={search_term_string}",
               "query-input": "required name=search_term_string"
             }
           })}
