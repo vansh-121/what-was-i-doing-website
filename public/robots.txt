@@ -30,6 +30,3 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://www.whatwasidoing.dev/sitemap.xml
-
-# Host
-Host: www.whatwasidoing.dev
