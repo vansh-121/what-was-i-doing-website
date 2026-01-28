@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import LoadingSkeleton from "@/components/LoadingSkeleton";
+import { useMarketplaceStats } from "@/hooks/useMarketplaceStats";
 
 // Lazy load below-the-fold components
 const ProblemSolution = lazy(() => import("@/components/ProblemSolution"));
@@ -18,6 +19,7 @@ const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const { rating, ratingCount, installs } = useMarketplaceStats();
 
   useEffect(() => {
     // Simulate initial load time for assets
@@ -75,11 +77,16 @@ const Index = () => {
               "price": "0",
               "priceCurrency": "USD"
             },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "ratingCount": "10"
-            }
+            // Only include rating if we have actual reviews
+            ...(ratingCount > 0 && {
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": rating.toString(),
+                "ratingCount": ratingCount.toString(),
+                "bestRating": "5",
+                "worstRating": "1"
+              }
+            })
           })}
         </script>
       </Helmet>
