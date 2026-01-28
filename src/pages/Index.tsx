@@ -38,18 +38,26 @@ const Index = () => {
         <title>What Was I Doing? - Never Lose Your Coding Context | VS Code Extension</title>
         <meta
           name="description"
-          content="Automatically track your work context and resume exactly where you left off. The ultimate VS Code extension for developers who value productivity. Install now!"
+          content="Automatically track your work context and resume exactly where you left off. The ultimate VS Code extension for developers who value productivity. Free, open source, and easy to install!"
         />
-        <meta name="keywords" content="VS Code extension, productivity, context switching, developer tools, resume work, coding, workflow" />
+        <meta name="keywords" content="VS Code extension, productivity, context switching, developer tools, resume work, coding, workflow, programming, IDE, Visual Studio Code, open source, free extension, developer productivity, work tracker, coding context, code resume" />
+        <link rel="canonical" href="https://whatwasidoing.dev/" />
+        
+        {/* Robots */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://whatwasidoing.dev/" />
         <meta property="og:title" content="What Was I Doing? - Never Lose Your Coding Context" />
         <meta property="og:description" content="Automatically track your work context and resume exactly where you left off. The ultimate VS Code extension for developers who value productivity." />
         <meta property="og:image" content="https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png" />
+        <meta property="og:site_name" content="What Was I Doing?" />
+        <meta property="og:locale" content="en_US" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://whatwasidoing.dev/" />
         <meta name="twitter:title" content="What Was I Doing? - Never Lose Your Coding Context" />
         <meta name="twitter:description" content="Automatically track your work context and resume exactly where you left off." />
         <meta name="twitter:image" content="https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png" />
