@@ -1,11 +1,19 @@
 import { ArrowRight, Download, Github, Heart, Star, Clock, Zap, MousePointerClick } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
+import { useMarketplaceStats } from "@/hooks/useMarketplaceStats";
 
 const Hero = () => {
+  const { rating, ratingCount, installs } = useMarketplaceStats();
+  
   const stats = [
     { icon: Zap, label: "Setup", value: "Instant" },
-    { icon: Star, label: "Rating", value: "5.0" },
+    { 
+      icon: Star, 
+      label: "Rating", 
+      value: rating > 0 ? `${rating}/5` : "5.0",
+      subtitle: ratingCount > 0 ? `(${ratingCount} reviews)` : undefined
+    },
     { icon: MousePointerClick, label: "Resume", value: "One Click" },
     { icon: Clock, label: "Version", value: "1.0.4" },
   ];
@@ -125,6 +133,11 @@ const Hero = () => {
                 <stat.icon className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
                 <span className="font-semibold text-xs sm:text-sm">{stat.value}</span>
                 <span className="text-muted-foreground text-xs sm:text-sm">{stat.label}</span>
+                {stat.subtitle && (
+                  <span className="text-muted-foreground text-[10px] sm:text-xs w-full text-center mt-0.5">
+                    {stat.subtitle}
+                  </span>
+                )}
               </div>
             ))}
           </motion.div>
