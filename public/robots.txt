@@ -1,5 +1,5 @@
 # Robots.txt for What Was I Doing? Website
-# https://whatwasidoing.dev/
+# https://www.whatwasidoing.dev/
 
 # Allow all search engines to crawl the site
 User-agent: Googlebot
@@ -29,7 +29,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://whatwasidoing.dev/sitemap.xml
+Sitemap: https://www.whatwasidoing.dev/sitemap.xml
 
 # Host
-Host: https://whatwasidoing.dev
+Host: https://www.whatwasidoing.dev
