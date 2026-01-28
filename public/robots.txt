@@ -32,4 +32,4 @@ Allow: /
 Sitemap: https://www.whatwasidoing.dev/sitemap.xml
 
 # Host
-Host: https://www.whatwasidoing.dev
+Host: www.whatwasidoing.dev
