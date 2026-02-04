@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import LoadingSkeleton from "@/components/LoadingSkeleton";
 import { useMarketplaceStats } from "@/hooks/useMarketplaceStats";
+import { SEO_CONFIG } from "@/config/seo";
 
 // Lazy load below-the-fold components
 const ProblemSolution = lazy(() => import("@/components/ProblemSolution"));
@@ -38,14 +39,11 @@ const Index = () => {
     <>
       <Helmet>
         {/* Primary Meta Tags */}
-        <title>What Was I Doing? - Never Lose Your Coding Context | Free VS Code Extension</title>
-        <meta name="title" content="What Was I Doing? - Never Lose Your Coding Context | Free VS Code Extension" />
-        <meta
-          name="description"
-          content="Free VS Code extension that automatically tracks your coding context. Resume exactly where you left off after breaks with one click. Boost productivity by 40%. Open source developer tool for Visual Studio Code. Install now!"
-        />
-        <meta name="author" content="Vansh Sethi" />
-        <meta name="keywords" content="VS Code extension, vscode extension, visual studio code extension, productivity extension, context switching, developer tools, developer productivity, resume work context, coding context, workflow automation, programming tools, IDE extension, open source vscode, free vscode extension, work tracker, code session tracker, project context, task resume, developer workflow, coding productivity, context recovery, VS Code marketplace, vscode productivity, break management, coding session, work continuity, development tools, programmer productivity" />
+        <title>{SEO_CONFIG.title}</title>
+        <meta name="title" content={SEO_CONFIG.title} />
+        <meta name="description" content={SEO_CONFIG.description} />
+        <meta name="author" content={SEO_CONFIG.author.name} />
+        <meta name="keywords" content={SEO_CONFIG.keywords} />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />
         <meta name="bingbot" content="index, follow" />
@@ -54,45 +52,45 @@ const Index = () => {
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <meta name="rating" content="general" />
-        <link rel="canonical" href="https://www.whatwasidoing.dev/" />
+        <link rel="canonical" href={SEO_CONFIG.siteUrl} />
         
         {/* Author Information */}
-        <link rel="author" href="https://vanshsethi.in/" />
-        <link rel="me" href="https://www.linkedin.com/in/vansh-sethi-vs/" />
-        <link rel="me" href="https://github.com/vansh-121" />
+        <link rel="author" href={SEO_CONFIG.author.website} />
+        <link rel="me" href={SEO_CONFIG.author.linkedin} />
+        <link rel="me" href={SEO_CONFIG.author.github} />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.whatwasidoing.dev/" />
-        <meta property="og:title" content="What Was I Doing? - Never Lose Your Coding Context | Free VS Code Extension" />
-        <meta property="og:description" content="Free VS Code extension that automatically tracks your coding context. Resume exactly where you left off with one click. Boost your productivity by 40%. Open source & free to use!" />
-        <meta property="og:image" content="https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png" />
-        <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png" />
+        <meta property="og:url" content={SEO_CONFIG.siteUrl} />
+        <meta property="og:title" content={SEO_CONFIG.title} />
+        <meta property="og:description" content={SEO_CONFIG.ogDescription} />
+        <meta property="og:image" content={SEO_CONFIG.ogImage} />
+        <meta property="og:image:secure_url" content={SEO_CONFIG.ogImage} />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="What Was I Doing VS Code Extension Logo" />
-        <meta property="og:site_name" content="What Was I Doing?" />
+        <meta property="og:image:alt" content={SEO_CONFIG.ogImageAlt} />
+        <meta property="og:site_name" content={SEO_CONFIG.siteName} />
         <meta property="og:locale" content="en_US" />
         
         {/* Twitter / Social Media */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@vansh_121" />
-        <meta name="twitter:creator" content="@vansh_121" />
-        <meta name="twitter:url" content="https://www.whatwasidoing.dev/" />
-        <meta name="twitter:title" content="What Was I Doing? - Free VS Code Extension for Developer Productivity" />
-        <meta name="twitter:description" content="Never lose your coding context! Automatically track and resume your work with one click. Free & open source VS Code extension. Boost productivity by 40%. Install now!" />
-        <meta name="twitter:image" content="https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png" />
-        <meta name="twitter:image:alt" content="What Was I Doing VS Code Extension Logo" />
+        <meta name="twitter:site" content={SEO_CONFIG.author.twitter} />
+        <meta name="twitter:creator" content={SEO_CONFIG.author.twitter} />
+        <meta name="twitter:url" content={SEO_CONFIG.siteUrl} />
+        <meta name="twitter:title" content={SEO_CONFIG.titleShort} />
+        <meta name="twitter:description" content={SEO_CONFIG.twitterDescription} />
+        <meta name="twitter:image" content={SEO_CONFIG.ogImage} />
+        <meta name="twitter:image:alt" content={SEO_CONFIG.ogImageAlt} />
         
         {/* Structured Data - SoftwareApplication */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            "name": "What Was I Doing?",
-            "description": "Automatically track your work context and resume exactly where you left off. The ultimate VS Code extension for developers who value productivity.",
-            "url": "https://www.whatwasidoing.dev/",
+            "name": SEO_CONFIG.siteName,
+            "description": SEO_CONFIG.description,
+            "url": SEO_CONFIG.siteUrl,
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Windows, macOS, Linux",
             "softwareVersion": "1.0.0",
@@ -103,20 +101,20 @@ const Index = () => {
             },
             "author": {
               "@type": "Person",
-              "name": "Vansh Sethi",
-              "url": "https://vanshsethi.in/",
+              "name": SEO_CONFIG.author.name,
+              "url": SEO_CONFIG.author.website,
               "sameAs": [
-                "https://www.linkedin.com/in/vansh-sethi-vs/",
-                "https://github.com/vansh-121"
+                SEO_CONFIG.author.linkedin,
+                SEO_CONFIG.author.github
               ]
             },
             "publisher": {
               "@type": "Organization",
-              "name": "What Was I Doing",
-              "url": "https://www.whatwasidoing.dev/"
+              "name": SEO_CONFIG.siteName,
+              "url": SEO_CONFIG.siteUrl
             },
-            "downloadUrl": "https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing",
-            "screenshot": "https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png",
+            "downloadUrl": SEO_CONFIG.links.marketplace,
+            "screenshot": SEO_CONFIG.ogImage,
             // Only include rating if we have actual reviews
             ...(ratingCount > 0 && {
               "aggregateRating": {
@@ -135,12 +133,12 @@ const Index = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "name": "What Was I Doing?",
-            "url": "https://www.whatwasidoing.dev/",
-            "description": "Official website for What Was I Doing? VS Code Extension",
+            "name": SEO_CONFIG.siteName,
+            "url": SEO_CONFIG.siteUrl,
+            "description": `Official website for ${SEO_CONFIG.siteName} VS Code Extension`,
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://www.whatwasidoing.dev/?q={search_term_string}",
+              "target": `${SEO_CONFIG.siteUrl}?q={search_term_string}`,
               "query-input": "required name=search_term_string"
             }
           })}
@@ -190,19 +188,19 @@ const Index = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.whatwasidoing.dev/"
+                "item": SEO_CONFIG.siteUrl
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Features",
-                "item": "https://www.whatwasidoing.dev/#features"
+                "item": `${SEO_CONFIG.siteUrl}#features`
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Installation",
-                "item": "https://www.whatwasidoing.dev/#installation"
+                "item": `${SEO_CONFIG.siteUrl}#installation`
               }
             ]
           })}
@@ -213,24 +211,24 @@ const Index = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "What Was I Doing",
-            "url": "https://www.whatwasidoing.dev/",
-            "logo": "https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png",
+            "name": SEO_CONFIG.siteName,
+            "url": SEO_CONFIG.siteUrl,
+            "logo": SEO_CONFIG.ogImage,
             "founder": {
               "@type": "Person",
-              "name": "Vansh Sethi",
-              "url": "https://vanshsethi.in/"
+              "name": SEO_CONFIG.author.name,
+              "url": SEO_CONFIG.author.website
             },
             "sameAs": [
-              "https://github.com/vansh-121",
-              "https://www.linkedin.com/in/vansh-sethi-vs/",
+              SEO_CONFIG.author.github,
+              SEO_CONFIG.author.linkedin,
               "https://marketplace.visualstudio.com/publishers/VanshSethi"
             ]
           })}
         </script>
 
         {/* Preload Critical Resources */}
-        <link rel="preload" as="image" href="https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png" />
+        <link rel="preload" as="image" href={SEO_CONFIG.ogImage} />
         <link rel="dns-prefetch" href="https://marketplace.visualstudio.com" />
         <link rel="dns-prefetch" href="https://github.com" />
       </Helmet>

@@ -6,24 +6,21 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "./ui/popover";
+import { SEO_CONFIG } from "@/config/seo";
 
 const ShareButtons = () => {
   const [copied, setCopied] = useState(false);
-  
-  const url = "https://www.whatwasidoing.dev/";
-  const title = "What Was I Doing? - Never Lose Your Coding Context | Free VS Code Extension";
-  const description = "Free VS Code extension that automatically tracks your coding context. Boost productivity by 40%!";
 
   const shareLinks = {
-    twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}&via=vansh_121`,
-    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
-    whatsapp: `https://wa.me/?text=${encodeURIComponent(`${title} ${url}`)}`,
+    twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(SEO_CONFIG.shareMessages.twitter(SEO_CONFIG.siteUrl))}&via=vansh_121`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(SEO_CONFIG.siteUrl)}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(SEO_CONFIG.siteUrl)}`,
+    whatsapp: `https://wa.me/?text=${encodeURIComponent(SEO_CONFIG.shareMessages.whatsapp(SEO_CONFIG.siteUrl))}`,
   };
 
   const copyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText(url);
+      await navigator.clipboard.writeText(SEO_CONFIG.siteUrl);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
