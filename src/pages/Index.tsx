@@ -38,17 +38,22 @@ const Index = () => {
     <>
       <Helmet>
         {/* Primary Meta Tags */}
-        <title>What Was I Doing? - Never Lose Your Coding Context | VS Code Extension</title>
-        <meta name="title" content="What Was I Doing? - Never Lose Your Coding Context | VS Code Extension" />
+        <title>What Was I Doing? - Never Lose Your Coding Context | Free VS Code Extension</title>
+        <meta name="title" content="What Was I Doing? - Never Lose Your Coding Context | Free VS Code Extension" />
         <meta
           name="description"
-          content="Automatically track your work context and resume exactly where you left off. The ultimate VS Code extension for developers who value productivity. Free and open source."
+          content="Free VS Code extension that automatically tracks your coding context. Resume exactly where you left off after breaks with one click. Boost productivity by 40%. Open source developer tool for Visual Studio Code. Install now!"
         />
         <meta name="author" content="Vansh Sethi" />
-        <meta name="keywords" content="VS Code extension, productivity, context switching, developer tools, resume work, coding, workflow, programming, IDE, Visual Studio Code, open source, free extension, developer productivity, work tracker" />
+        <meta name="keywords" content="VS Code extension, vscode extension, visual studio code extension, productivity extension, context switching, developer tools, developer productivity, resume work context, coding context, workflow automation, programming tools, IDE extension, open source vscode, free vscode extension, work tracker, code session tracker, project context, task resume, developer workflow, coding productivity, context recovery, VS Code marketplace, vscode productivity, break management, coding session, work continuity, development tools, programmer productivity" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />
         <meta name="bingbot" content="index, follow" />
+        <meta name="applicable-device" content="pc,mobile" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="rating" content="general" />
         <link rel="canonical" href="https://www.whatwasidoing.dev/" />
         
         {/* Author Information */}
@@ -59,20 +64,26 @@ const Index = () => {
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.whatwasidoing.dev/" />
-        <meta property="og:title" content="What Was I Doing? - Never Lose Your Coding Context" />
-        <meta property="og:description" content="Automatically track your work context and resume exactly where you left off. The ultimate VS Code extension for developers." />
+        <meta property="og:title" content="What Was I Doing? - Never Lose Your Coding Context | Free VS Code Extension" />
+        <meta property="og:description" content="Free VS Code extension that automatically tracks your coding context. Resume exactly where you left off with one click. Boost your productivity by 40%. Open source & free to use!" />
         <meta property="og:image" content="https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png" />
+        <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png" />
+        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="What Was I Doing VS Code Extension Logo" />
         <meta property="og:site_name" content="What Was I Doing?" />
         <meta property="og:locale" content="en_US" />
         
         {/* Twitter / Social Media */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@vansh_121" />
+        <meta name="twitter:creator" content="@vansh_121" />
         <meta name="twitter:url" content="https://www.whatwasidoing.dev/" />
-        <meta name="twitter:title" content="What Was I Doing? - VS Code Extension" />
-        <meta name="twitter:description" content="Never Lose Your Coding Context when returning to code. Free VS Code extension for developers." />
+        <meta name="twitter:title" content="What Was I Doing? - Free VS Code Extension for Developer Productivity" />
+        <meta name="twitter:description" content="Never lose your coding context! Automatically track and resume your work with one click. Free & open source VS Code extension. Boost productivity by 40%. Install now!" />
         <meta name="twitter:image" content="https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png" />
+        <meta name="twitter:image:alt" content="What Was I Doing VS Code Extension Logo" />
         
         {/* Structured Data - SoftwareApplication */}
         <script type="application/ld+json">
@@ -168,6 +179,60 @@ const Index = () => {
             ]
           })}
         </script>
+
+        {/* Structured Data - BreadcrumbList */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.whatwasidoing.dev/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Features",
+                "item": "https://www.whatwasidoing.dev/#features"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Installation",
+                "item": "https://www.whatwasidoing.dev/#installation"
+              }
+            ]
+          })}
+        </script>
+
+        {/* Structured Data - Organization */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "What Was I Doing",
+            "url": "https://www.whatwasidoing.dev/",
+            "logo": "https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png",
+            "founder": {
+              "@type": "Person",
+              "name": "Vansh Sethi",
+              "url": "https://vanshsethi.in/"
+            },
+            "sameAs": [
+              "https://github.com/vansh-121",
+              "https://www.linkedin.com/in/vansh-sethi-vs/",
+              "https://marketplace.visualstudio.com/publishers/VanshSethi"
+            ]
+          })}
+        </script>
+
+        {/* Preload Critical Resources */}
+        <link rel="preload" as="image" href="https://raw.githubusercontent.com/vansh-121/What-Was-I-Doing-Extension/master/icon.png" />
+        <link rel="dns-prefetch" href="https://marketplace.visualstudio.com" />
+        <link rel="dns-prefetch" href="https://github.com" />
       </Helmet>
 
       <div className="min-h-screen bg-background animate-fade-in">

@@ -2,6 +2,7 @@ import { ArrowRight, Download, Github, Heart, Star, Clock, Zap, MousePointerClic
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
 import { useMarketplaceStats } from "@/hooks/useMarketplaceStats";
+import ShareButtons from "./ShareButtons";
 
 const Hero = () => {
   const { rating, ratingCount, installs } = useMarketplaceStats();
@@ -116,6 +117,7 @@ const Hero = () => {
               <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
               Sponsor
             </a>
+            <ShareButtons />
           </motion.div>
 
           {/* Stats */}
