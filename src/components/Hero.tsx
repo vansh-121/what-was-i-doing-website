@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Github, Heart, Star, Clock, Zap, MousePointerClick } from "lucide-react";
+import { ArrowRight, Download, Heart, Star, Clock, Zap, MousePointerClick } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
 import { useMarketplaceStats } from "@/hooks/useMarketplaceStats";
@@ -6,17 +6,17 @@ import ShareButtons from "./ShareButtons";
 
 const Hero = () => {
   const { rating, ratingCount, installs } = useMarketplaceStats();
-  
+
   const stats = [
     { icon: Zap, label: "Setup", value: "Instant" },
-    { 
-      icon: Star, 
-      label: "Rating", 
+    {
+      icon: Star,
+      label: "Rating",
       value: rating > 0 ? `${rating}/5` : "5.0",
       subtitle: ratingCount > 0 ? `(${ratingCount} reviews)` : undefined
     },
     { icon: MousePointerClick, label: "Resume", value: "One Click" },
-    { icon: Clock, label: "Version", value: "1.0.4" },
+    { icon: Clock, label: "Version", value: "1.0.8" },
   ];
 
   return (
@@ -39,7 +39,7 @@ const Hero = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-accent"></span>
             </span>
-            <span className="text-[10px] sm:text-sm text-muted-foreground">Now available on VS Code Marketplace</span>
+            <span className="text-[10px] sm:text-sm text-muted-foreground">Now available on VS Code Marketplace & Open VSX</span>
           </motion.div>
 
           {/* Logo */}
@@ -100,13 +100,13 @@ const Hero = () => {
               <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="https://github.com/vansh-121/What-Was-I-Doing-Extension"
+              href="https://open-vsx.org/extension/VanshSethi/what-was-i-doing"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary text-sm sm:text-base px-5 sm:px-8 py-3 sm:py-4 w-full sm:w-auto justify-center"
             >
-              <Github className="w-4 h-4 sm:w-5 sm:h-5" />
-              View on GitHub
+              <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+              Open VSX
             </a>
             <a
               href="https://github.com/sponsors/vansh-121"

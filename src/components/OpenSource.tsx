@@ -21,7 +21,7 @@ const OpenSource = () => {
               </h2>
               
               <p className="text-sm sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8">
-                This extension is proudly open source. View the code, contribute features, report issues, or just give us a star on GitHub.
+                This extension is proudly open source. Available on both VS Code Marketplace and Open VSX Registry. View the code, contribute features, report issues, or just give us a star on GitHub.
               </p>
 
               <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-6 sm:mb-10">

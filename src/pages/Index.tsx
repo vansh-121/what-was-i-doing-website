@@ -163,7 +163,7 @@ const Index = () => {
                 "name": "Is What Was I Doing extension free?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, What Was I Doing? is completely free and open source. You can install it from the VS Code Marketplace at no cost."
+                  "text": "Yes, What Was I Doing? is completely free and open source. You can install it from the VS Code Marketplace or Open VSX Registry at no cost."
                 }
               },
               {
@@ -171,7 +171,7 @@ const Index = () => {
                 "name": "How do I install What Was I Doing extension?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "You can install it directly from VS Code by searching for 'What Was I Doing' in the Extensions panel, or visit the VS Code Marketplace and click Install."
+                  "text": "You can install it directly from VS Code by searching for 'What Was I Doing' in the Extensions panel, visit the VS Code Marketplace, or get it from the Open VSX Registry for editors like Cursor, Windsurf, Antigravity, and VSCodium."
                 }
               }
             ]
@@ -222,7 +222,8 @@ const Index = () => {
             "sameAs": [
               SEO_CONFIG.author.github,
               SEO_CONFIG.author.linkedin,
-              "https://marketplace.visualstudio.com/publishers/VanshSethi"
+              "https://marketplace.visualstudio.com/publishers/VanshSethi",
+              "https://open-vsx.org/extension/VanshSethi/what-was-i-doing"
             ]
           })}
         </script>
@@ -230,6 +231,7 @@ const Index = () => {
         {/* Preload Critical Resources */}
         <link rel="preload" as="image" href={SEO_CONFIG.ogImage} />
         <link rel="dns-prefetch" href="https://marketplace.visualstudio.com" />
+        <link rel="dns-prefetch" href="https://open-vsx.org" />
         <link rel="dns-prefetch" href="https://github.com" />
       </Helmet>
 

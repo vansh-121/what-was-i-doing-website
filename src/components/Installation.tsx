@@ -42,11 +42,21 @@ const Installation = () => {
       title: "Direct Link",
       recommended: false,
       link: "https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing",
+      linkLabel: "Open Marketplace",
+    },
+    {
+      id: "openvsx",
+      icon: ExternalLink,
+      title: "Open VSX",
+      recommended: false,
+      link: "https://open-vsx.org/extension/VanshSethi/what-was-i-doing",
+      linkLabel: "Open VSX Registry",
+      description: "For Cursor, Windsurf, Antigravity, VSCodium, Gitpod & other modern IDEs",
     },
   ];
 
   return (
-    <section className="section-padding relative">
+    <section id="installation" className="section-padding relative">
       <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[300px] sm:w-[450px] lg:w-[600px] h-[150px] sm:h-[225px] lg:h-[300px] bg-accent/10 rounded-full blur-[80px] sm:blur-[100px] lg:blur-[120px] -z-10" />
       
       <div className="container mx-auto px-3 sm:px-4">
@@ -62,7 +72,7 @@ const Installation = () => {
           </p>
         </ScrollFadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 lg:gap-6 max-w-5xl mx-auto">
           {methods.map((method, index) => (
             <ScrollFadeIn key={method.id} delay={index * 0.1}>
               <div
@@ -119,7 +129,12 @@ const Installation = () => {
 
                 {method.link && (
                   <div className="space-y-3 sm:space-y-4">
-                    <p className="text-xs sm:text-sm text-muted-foreground">Visit the VS Code Marketplace directly:</p>
+                    {method.description && (
+                      <p className="text-xs sm:text-sm text-muted-foreground">{method.description}</p>
+                    )}
+                    {!method.description && (
+                      <p className="text-xs sm:text-sm text-muted-foreground">Visit the VS Code Marketplace directly:</p>
+                    )}
                     <a
                       href={method.link}
                       target="_blank"
@@ -127,7 +142,7 @@ const Installation = () => {
                       className="btn-accent w-full justify-center text-xs sm:text-sm py-2 sm:py-3"
                     >
                       <Download className="w-3 h-3 sm:w-4 sm:h-4" />
-                      Open Marketplace
+                      {method.linkLabel || "Open Marketplace"}
                     </a>
                   </div>
                 )}
