@@ -6,17 +6,17 @@ import ShareButtons from "./ShareButtons";
 
 const Hero = () => {
   const { rating, ratingCount, installs } = useMarketplaceStats();
-  
+
   const stats = [
     { icon: Zap, label: "Setup", value: "Instant" },
-    { 
-      icon: Star, 
-      label: "Rating", 
+    {
+      icon: Star,
+      label: "Rating",
       value: rating > 0 ? `${rating}/5` : "5.0",
       subtitle: ratingCount > 0 ? `(${ratingCount} reviews)` : undefined
     },
     { icon: MousePointerClick, label: "Resume", value: "One Click" },
-    { icon: Clock, label: "Version", value: "1.0.4" },
+    { icon: Clock, label: "Version", value: "1.0.8" },
   ];
 
   return (
