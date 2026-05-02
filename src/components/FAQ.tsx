@@ -38,7 +38,11 @@ const FAQ = () => {
     },
     {
       question: "Is this extension free?",
-      answer: "Yes! It's completely free and open-source under the MIT license. You can use it, modify it, and contribute to it on GitHub.",
+      answer: "Yes! It's completely free and open-source under the MIT license. You can install it from the VS Code Marketplace or Open VSX Registry. Use it, modify it, and contribute to it on GitHub.",
+    },
+    {
+      question: "Which editors and IDEs are supported?",
+      answer: "The extension is available on both the VS Code Marketplace and Open VSX Registry. This means it works with VS Code, Cursor, Windsurf, Antigravity, VSCodium, Gitpod, Eclipse Theia, and any other editor that supports VS Code extensions or Open VSX.",
     },
   ];
 

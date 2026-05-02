@@ -5,6 +5,7 @@ import logo from "@/assets/logo.png";
 const Footer = () => {
   const quickLinks = [
     { label: "VS Code Marketplace", href: "https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing" },
+    { label: "Open VSX Registry", href: "https://open-vsx.org/extension/VanshSethi/what-was-i-doing" },
     { label: "GitHub Repository", href: "https://github.com/vansh-121/What-Was-I-Doing-Extension" },
     { label: "Sponsor on GitHub", href: "https://github.com/sponsors/vansh-121" },
     { label: "Report an Issue", href: "https://github.com/vansh-121/What-Was-I-Doing-Extension/issues" },

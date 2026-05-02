@@ -42,6 +42,11 @@ export const SEO_CONFIG = {
     "coding productivity",
     "context recovery",
     "VS Code marketplace",
+    "Open VSX",
+    "open vsx extension",
+    "Cursor extension",
+    "Windsurf extension",
+    "VSCodium extension",
     "vscode productivity",
     "break management",
     "coding session",
@@ -66,6 +71,7 @@ export const SEO_CONFIG = {
   // External Links
   links: {
     marketplace: "https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing",
+    openVsx: "https://open-vsx.org/extension/VanshSethi/what-was-i-doing",
     github: "https://github.com/vansh-121/What-Was-I-Doing-Extension",
     sponsor: "https://github.com/sponsors/vansh-121",
     issues: "https://github.com/vansh-121/What-Was-I-Doing-Extension/issues"

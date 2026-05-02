@@ -7,7 +7,7 @@ const HowItWorks = () => {
       number: "01",
       icon: Download,
       title: "Install the Extension",
-      description: "One-click install from VS Code Marketplace. Zero configuration needed. Works immediately after installation.",
+      description: "One-click install from VS Code Marketplace or Open VSX. Zero configuration needed. Works immediately after installation.",
     },
     {
       number: "02",

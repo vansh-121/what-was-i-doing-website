@@ -101,9 +101,7 @@ const ProblemSolution = () => {
           <ScrollFadeIn direction="up">
             <div className="flex justify-center mt-8 sm:mt-12">
               <a
-                href="https://marketplace.visualstudio.com/items?itemName=VanshSethi.what-was-i-doing"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#installation"
                 className="btn-primary inline-flex text-sm sm:text-base"
               >
                 Try It Free
